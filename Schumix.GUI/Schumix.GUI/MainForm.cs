@@ -11,6 +11,8 @@ namespace Schumix.GUI
 {
     public partial class MainForm : Form
     {
+        public string ToTheIRC { get; set; }
+
         public MainForm()
         {
             InitializeComponent();
@@ -83,6 +85,22 @@ namespace Schumix.GUI
         private void button_Send_Click(object sender, EventArgs e)
         {
             Log.Notice("teszt", "teszt");
+
+            textBox_Cmd.Text = "";
+        }
+
+        private void textBox_Cmd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)
+            {
+                textBox_Cmd.Text = ToTheIRC;
+
+                // az enter lenyomva a parancssor textboxban, tehát a parancs feldolgozásra kerül,
+                // ugyanúgy mintha a Küldés gombra kattintott volna
+                Log.Notice("teszt", "teszt");
+
+                textBox_Cmd.Text = "";
+            }
         }
     }
 }

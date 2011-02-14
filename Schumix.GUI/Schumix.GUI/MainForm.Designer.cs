@@ -154,6 +154,7 @@
             this.textBox_Cmd.Name = "textBox_Cmd";
             this.textBox_Cmd.Size = new System.Drawing.Size(617, 20);
             this.textBox_Cmd.TabIndex = 1;
+            this.textBox_Cmd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Cmd_KeyPress);
             // 
             // textBox_Log
             // 
