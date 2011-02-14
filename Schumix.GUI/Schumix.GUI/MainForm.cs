@@ -84,7 +84,9 @@ namespace Schumix.GUI
 
         private void button_Send_Click(object sender, EventArgs e)
         {
-            Log.Notice("teszt", "teszt");
+            ToTheIRC = textBox_Cmd.Text;
+
+            AdatFeldolgozo(ToTheIRC);
 
             textBox_Cmd.Text = "";
         }
@@ -93,14 +95,19 @@ namespace Schumix.GUI
         {
             if (e.KeyChar == (char)Keys.Return)
             {
-                textBox_Cmd.Text = ToTheIRC;
+                ToTheIRC = textBox_Cmd.Text;
 
                 // az enter lenyomva a parancssor textboxban, tehát a parancs feldolgozásra kerül,
                 // ugyanúgy mintha a Küldés gombra kattintott volna
-                Log.Notice("teszt", "teszt");
+                AdatFeldolgozo(ToTheIRC);
 
                 textBox_Cmd.Text = "";
             }
+        }
+
+        private void AdatFeldolgozo(string adat)
+        {
+            Log.Notice("*", adat);
         }
     }
 }

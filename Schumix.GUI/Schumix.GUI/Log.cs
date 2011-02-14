@@ -48,7 +48,8 @@ namespace Schumix.GUI
                     form.textBox_Log.ForeColor = System.Drawing.Color.White;
                     form.textBox_Log.Text += String.Format(" N {0}: ", source);
                     form.textBox_Log.ForeColor = System.Drawing.Color.Gray;
-                    form.textBox_Log.Text += String.Format("{0}\n", format);
+                    form.textBox_Log.Text += String.Format("{0}{1}", format, 
+                        Environment.NewLine);
                 }
             }
         }
