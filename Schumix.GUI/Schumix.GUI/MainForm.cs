@@ -11,13 +11,20 @@ namespace Schumix.GUI
 {
     public partial class MainForm : Form
     {
-        // ezzel a kóddal új fület tudsz hozzáadni:
-        
-
         public MainForm()
         {
             InitializeComponent();
+            Log.form = this;
         }
+
+        /*public string TextOnTextBox_Log
+        {
+            get { return textBox_Log.Text; }
+            set
+            {
+                textBox_Log.Text = value;
+            }
+        }*/
 
         /// <summary>
         /// Ha erre kattint vki akkor az ablak eltűnik és egy kis "tray icon"
@@ -75,7 +82,7 @@ namespace Schumix.GUI
 
         private void button_Send_Click(object sender, EventArgs e)
         {
-
+            Log.Notice("teszt", "teszt");
         }
     }
 }

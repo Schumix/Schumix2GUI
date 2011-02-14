@@ -39,6 +39,7 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage_Main = new System.Windows.Forms.TabPage();
+            this.button_Send = new System.Windows.Forms.Button();
             this.textBox_Cmd = new System.Windows.Forms.TextBox();
             this.textBox_Log = new System.Windows.Forms.TextBox();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
@@ -48,7 +49,6 @@
             this.closeWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.button_Send = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabPage_Main.SuspendLayout();
@@ -135,6 +135,17 @@
             this.tabPage_Main.Text = "Parancssor";
             this.tabPage_Main.UseVisualStyleBackColor = true;
             // 
+            // button_Send
+            // 
+            this.button_Send.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_Send.Location = new System.Drawing.Point(638, 362);
+            this.button_Send.Name = "button_Send";
+            this.button_Send.Size = new System.Drawing.Size(75, 23);
+            this.button_Send.TabIndex = 2;
+            this.button_Send.Text = "Küldés";
+            this.button_Send.UseVisualStyleBackColor = true;
+            this.button_Send.Click += new System.EventHandler(this.button_Send_Click);
+            // 
             // textBox_Cmd
             // 
             this.textBox_Cmd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
@@ -148,6 +159,7 @@
             // 
             this.textBox_Log.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox_Log.Enabled = false;
             this.textBox_Log.Location = new System.Drawing.Point(8, 6);
             this.textBox_Log.Multiline = true;
             this.textBox_Log.Name = "textBox_Log";
@@ -202,17 +214,6 @@
             this.exitToolStripMenuItem1.Size = new System.Drawing.Size(148, 22);
             this.exitToolStripMenuItem1.Text = "&Exit";
             this.exitToolStripMenuItem1.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
-            // 
-            // button_Send
-            // 
-            this.button_Send.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_Send.Location = new System.Drawing.Point(638, 362);
-            this.button_Send.Name = "button_Send";
-            this.button_Send.Size = new System.Drawing.Size(75, 23);
-            this.button_Send.TabIndex = 2;
-            this.button_Send.Text = "Küldés";
-            this.button_Send.UseVisualStyleBackColor = true;
-            this.button_Send.Click += new System.EventHandler(this.button_Send_Click);
             // 
             // MainForm
             // 

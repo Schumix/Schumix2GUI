@@ -9,6 +9,8 @@ namespace Schumix.GUI
     {
         private static readonly object WriteLock = new object();
 
+        public static MainForm form;
+
         /// <returns>
         /// A visszat�r�si �rt�k az aktu�lis d�tum.
         /// </returns>
@@ -38,7 +40,16 @@ namespace Schumix.GUI
         {
             lock (WriteLock)
             {
-                
+                if (form != null)
+                {
+                    //form.TextOnTextBox_Log = "";
+                    form.textBox_Log.ForeColor = System.Drawing.Color.Gray;
+                    form.textBox_Log.Text += GetTime();
+                    form.textBox_Log.ForeColor = System.Drawing.Color.White;
+                    form.textBox_Log.Text += String.Format(" N {0}: ", source);
+                    form.textBox_Log.ForeColor = System.Drawing.Color.Gray;
+                    form.textBox_Log.Text += String.Format("{0}\n", format);
+                }
             }
         }
 
