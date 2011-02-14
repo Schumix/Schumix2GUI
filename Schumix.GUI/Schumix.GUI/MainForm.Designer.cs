@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel_KarakterMero = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,6 +50,7 @@
             this.closeWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabPage_Main.SuspendLayout();
@@ -57,11 +59,19 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel_KarakterMero});
             this.statusStrip1.Location = new System.Drawing.Point(0, 472);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(729, 22);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel_KarakterMero
+            // 
+            this.toolStripStatusLabel_KarakterMero.Name = "toolStripStatusLabel_KarakterMero";
+            this.toolStripStatusLabel_KarakterMero.Size = new System.Drawing.Size(174, 17);
+            this.toolStripStatusLabel_KarakterMero.Text = "Karakterek a parancssorban: 0/0";
             // 
             // menuStrip1
             // 
@@ -164,6 +174,7 @@
             this.textBox_Log.Location = new System.Drawing.Point(8, 6);
             this.textBox_Log.Multiline = true;
             this.textBox_Log.Name = "textBox_Log";
+            this.textBox_Log.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox_Log.Size = new System.Drawing.Size(705, 350);
             this.textBox_Log.TabIndex = 0;
             // 
@@ -230,6 +241,8 @@
             this.Name = "MainForm";
             this.Text = "Schumix Grafikus Kezelői Felülete (GUI)";
             this.Load += new System.EventHandler(this.MainForm_Load);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl.ResumeLayout(false);
@@ -246,7 +259,6 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabPage_Main;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hideToolStripMenuItem;
@@ -262,6 +274,8 @@
         public System.Windows.Forms.TextBox textBox_Cmd;
         public System.Windows.Forms.TextBox textBox_Log;
         private System.Windows.Forms.Button button_Send;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel_KarakterMero;
+        public System.Windows.Forms.TabControl tabControl;
     }
 }
 

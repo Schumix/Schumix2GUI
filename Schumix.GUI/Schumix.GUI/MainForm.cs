@@ -17,6 +17,7 @@ namespace Schumix.GUI
         {
             InitializeComponent();
             Log.form = this;
+            ManageTabControl.form = this;
         }
 
         /*public string TextOnTextBox_Log
@@ -76,7 +77,7 @@ namespace Schumix.GUI
             Environment.Exit(1);
         }
 
-        private void AddTabPage(string title)
+        public void AddTabPage(string title)
         {
             TabPage newTabPage = new TabPage(title);
             tabControl.TabPages.Add(newTabPage);
