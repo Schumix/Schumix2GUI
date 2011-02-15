@@ -85,6 +85,8 @@ namespace Schumix.GUI
 
         private void button_Send_Click(object sender, EventArgs e)
         {
+            if (textBox_Cmd.Text == "") return;
+
             ToTheIRC = textBox_Cmd.Text;
 
             AdatFeldolgozo(ToTheIRC);
