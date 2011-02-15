@@ -40,9 +40,9 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage_Main = new System.Windows.Forms.TabPage();
+            this.textBox_Log = new System.Windows.Forms.TextBox();
             this.button_Send = new System.Windows.Forms.Button();
             this.textBox_Cmd = new System.Windows.Forms.TextBox();
-            this.textBox_Log = new System.Windows.Forms.TextBox();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip_notify = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -134,9 +134,9 @@
             // 
             // tabPage_Main
             // 
+            this.tabPage_Main.Controls.Add(this.textBox_Log);
             this.tabPage_Main.Controls.Add(this.button_Send);
             this.tabPage_Main.Controls.Add(this.textBox_Cmd);
-            this.tabPage_Main.Controls.Add(this.textBox_Log);
             this.tabPage_Main.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Main.Name = "tabPage_Main";
             this.tabPage_Main.Padding = new System.Windows.Forms.Padding(3);
@@ -144,6 +144,19 @@
             this.tabPage_Main.TabIndex = 0;
             this.tabPage_Main.Text = "Parancssor";
             this.tabPage_Main.UseVisualStyleBackColor = true;
+            // 
+            // textBox_Log
+            // 
+            this.textBox_Log.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox_Log.Location = new System.Drawing.Point(8, 6);
+            this.textBox_Log.Multiline = true;
+            this.textBox_Log.Name = "textBox_Log";
+            this.textBox_Log.ReadOnly = true;
+            this.textBox_Log.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox_Log.Size = new System.Drawing.Size(705, 350);
+            this.textBox_Log.TabIndex = 3;
             // 
             // button_Send
             // 
@@ -165,18 +178,6 @@
             this.textBox_Cmd.Size = new System.Drawing.Size(617, 20);
             this.textBox_Cmd.TabIndex = 1;
             this.textBox_Cmd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Cmd_KeyPress);
-            // 
-            // textBox_Log
-            // 
-            this.textBox_Log.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_Log.Enabled = false;
-            this.textBox_Log.Location = new System.Drawing.Point(8, 6);
-            this.textBox_Log.Multiline = true;
-            this.textBox_Log.Name = "textBox_Log";
-            this.textBox_Log.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox_Log.Size = new System.Drawing.Size(705, 350);
-            this.textBox_Log.TabIndex = 0;
             // 
             // notifyIcon
             // 
@@ -272,10 +273,10 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
         public System.Windows.Forms.TextBox textBox_Cmd;
-        public System.Windows.Forms.TextBox textBox_Log;
         private System.Windows.Forms.Button button_Send;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel_KarakterMero;
         public System.Windows.Forms.TabControl tabControl;
+        public System.Windows.Forms.TextBox textBox_Log;
     }
 }
 
