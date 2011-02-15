@@ -157,6 +157,7 @@
             this.textBox_Log.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox_Log.Size = new System.Drawing.Size(705, 350);
             this.textBox_Log.TabIndex = 3;
+            this.textBox_Log.TextChanged += new System.EventHandler(this.textBox_Log_TextChanged);
             // 
             // button_Send
             // 

@@ -110,5 +110,11 @@ namespace Schumix.GUI
         {
             Log.Notice("*", adat);
         }
+
+        private void textBox_Log_TextChanged(object sender, EventArgs e)
+        {
+            textBox_Log.SelectionStart = textBox_Log.Text.Length;
+            textBox_Log.ScrollToCaret();
+        }
     }
 }
