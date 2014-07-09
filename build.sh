@@ -1,7 +1,5 @@
 #!/bin/bash
 
-git submodule update --init --recursive
-
 build_conf="$(echo "$1" | tr [:upper:] [:lower:])"
 
 if [ "$2" = "" ]; then
@@ -11,19 +9,19 @@ else
 fi
 
 if [ "$1" = "" ]; then
-	xbuild /p:Configuration="Release" SGit.sln /flp:LogFile=xbuild.log;Verbosity=Detailed
+	xbuild /p:Configuration="Release" Schumix.GUI/Schumix.GUI.sln /flp:LogFile=xbuild.log;Verbosity=Detailed
 else
 	if [ "$build_platform" = "" ]; then
 		if [ $build_conf = "debug" ]; then
-			xbuild /p:Configuration="Debug" SGit.sln /flp:LogFile=xbuild.log;Verbosity=Detailed
+			xbuild /p:Configuration="Debug" Schumix.GUI/Schumix.GUI.sln /flp:LogFile=xbuild.log;Verbosity=Detailed
 		else
-			xbuild /p:Configuration="Release" SGit.sln /flp:LogFile=xbuild.log;Verbosity=Detailed
+			xbuild /p:Configuration="Release" Schumix.GUI/Schumix.GUI.sln /flp:LogFile=xbuild.log;Verbosity=Detailed
 		fi
 	else
 		if [ $build_conf = "debug" ]; then
-			xbuild /p:Configuration="Debug" /p:PlatformTarget=$build_platform SGit.sln /flp:LogFile=xbuild.log;Verbosity=Detailed
+			xbuild /p:Configuration="Debug" /p:PlatformTarget=$build_platform Schumix.GUI/Schumix.GUI.sln /flp:LogFile=xbuild.log;Verbosity=Detailed
 		else
-			xbuild /p:Configuration="Release" /p:PlatformTarget=$build_platform SGit.sln /flp:LogFile=xbuild.log;Verbosity=Detailed
+			xbuild /p:Configuration="Release" /p:PlatformTarget=$build_platform Schumix.GUI/Schumix.GUI.sln /flp:LogFile=xbuild.log;Verbosity=Detailed
 		fi
 	fi
 fi

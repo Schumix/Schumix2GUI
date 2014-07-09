@@ -8,11 +8,11 @@ if "%BUILD_CONFIG%" == "" (
 )
 
 IF %BUILD_CONFIG%==Debug (
-	%MSBUILD_EXE% SGit.sln /p:Configuration=Debug /flp:LogFile=msbuild.log;Verbosity=Detailed
+	%MSBUILD_EXE% Schumix.GUI/Schumix.GUI.sln /p:Configuration=Debug /flp:LogFile=msbuild.log;Verbosity=Detailed
 )
 
 IF %BUILD_CONFIG%==Release (
-	%MSBUILD_EXE% SGit.sln /p:Configuration=Release /flp:LogFile=msbuild.log;Verbosity=Detailed
+	%MSBUILD_EXE% Schumix.GUI/Schumix.GUI.sln /p:Configuration=Release /flp:LogFile=msbuild.log;Verbosity=Detailed
 )
 
 ENDLOCAL
